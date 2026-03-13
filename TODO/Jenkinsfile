@@ -12,21 +12,21 @@ pipeline {
 
     stages {
 
-        stage('Install Dependencies') {
-            steps {
-                dir('TODO') {
-                    sh 'npm install'
-                }
-            }
-        }
+        // stage('Install Dependencies') {
+        //     steps {
+        //         dir('TODO') {
+        //             sh 'npm install'
+        //         }
+        //     }
+        // }
 
-        stage('Build Application') {
-            steps {
-                dir('TODO') {
-                    sh 'npm run build || true'
-                }
-            }
-        }
+        // stage('Build Application') {
+        //     steps {
+        //         dir('TODO') {
+        //             sh 'npm run build || true'
+        //         }
+        //     }
+        // }
 
         stage('Containerize Application') {
             steps {
