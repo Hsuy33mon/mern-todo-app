@@ -14,17 +14,13 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-# Install backend dependencies
 COPY todo_backend/package*.json ./
 RUN npm install
 
-# Copy backend code
 COPY todo_backend/ .
 
-# Copy React build into backend static folder
 COPY --from=frontend-build /app/frontend/build ./static/build
 
-# Environment variable
 ENV MONGODB_URI="mongodb+srv://vmes-ead:WQW4TVXAAvgoQoYb@cluster0.xzkm7.mongodb.net/?appName=Cluster0"
 
 EXPOSE 5000
